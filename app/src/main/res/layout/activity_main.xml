@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5C67C1EA"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -28,6 +29,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="57dp"
+        android:background="#67C1EA"
         android:text="Student"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -40,6 +42,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="57dp"
+        android:background="#67C1EA"
         android:text="Staff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +58,7 @@
         android:layout_marginTop="42dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="21dp"
-        android:background="#174FAE"
+        android:background="#67C1EA"
         android:gravity="center"
         android:text="Login Panel"
         android:textColor="#FFFFFF"
