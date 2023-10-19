@@ -14,13 +14,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(FirstFragment())
-
         binding.button.setOnClickListener{
+            binding.header.text = "Student Login Panel"
             replaceFragment(FirstFragment())
+            binding.textView3.text = ""
         }
         binding.button2.setOnClickListener{
+            binding.header.text = "Staff Login Panel"
             replaceFragment(SecondFragment())
+            binding.textView3.text = ""
         }
     }
 
