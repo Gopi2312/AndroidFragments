@@ -6,21 +6,16 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="203dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="284dp"
-        android:layout_marginEnd="133dp"
-        android:layout_marginBottom="310dp"
+        android:id="@+id/welcomeText"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
         android:gravity="center"
-        android:text="@string/welcome_students"
-        android:textSize="25sp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
