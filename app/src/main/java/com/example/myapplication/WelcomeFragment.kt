@@ -1,18 +1,16 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import com.example.myapplication.databinding.FragmentFirstBinding
+import androidx.fragment.app.activityViewModels
 import com.example.myapplication.databinding.WelcomFragmentBinding
 
 class WelcomeFragment: Fragment(R.layout.welcom_fragment) {
 
-    private val viewModel : LoginViewModel by viewModels()
+    private val viewModel : LoginViewModel by activityViewModels()
     private var _binding : WelcomFragmentBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -26,11 +24,6 @@ class WelcomeFragment: Fragment(R.layout.welcom_fragment) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.i("welcome",viewModel.userName.toString())
-        if (!viewModel.userName.isNullOrEmpty()) {
-            binding.welcomeText.text = "Welcome Back ${viewModel.userName}"
-        } else {
-            binding.welcomeText.text = "Welcome"
-        }
+        viewModel.userName?.let { userName -> binding.welcomeText.text = "Welcome $userName" }
     }
 }

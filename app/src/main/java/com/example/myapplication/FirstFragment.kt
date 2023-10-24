@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.activityViewModels
 import com.example.myapplication.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
-    private val viewModel : LoginViewModel by viewModels()
+    private val viewModel : LoginViewModel by activityViewModels()
     private var _binding: FragmentFirstBinding? = null
 
     private val binding get() = _binding!!
@@ -41,6 +40,13 @@ class FirstFragment : Fragment() {
             }
             binding.studentUserName.text.clear()
             binding.studentPassword.text.clear()
+        }
+        binding.Register.setOnClickListener{
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.fragmentContainerView,RegisterFragment())
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 
